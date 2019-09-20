@@ -74,3 +74,5 @@ C:\Users\ysong\source\github\KevsKitchen\KevsKitchen\KevsKitchen.Web\obj\Debug\K
 C:\Users\ysong\source\github\KevsKitchen\KevsKitchen\KevsKitchen.Web\obj\Debug\KevsKitchen.Web.csproj.CopyComplete
 C:\Users\ysong\source\github\KevsKitchen\KevsKitchen\KevsKitchen.Web\obj\Debug\KevsKitchen.Web.dll
 C:\Users\ysong\source\github\KevsKitchen\KevsKitchen\KevsKitchen.Web\obj\Debug\KevsKitchen.Web.pdb
+C:\Users\ysong\source\github\KevsKitchen\KevsKitchen\KevsKitchen.Web\bin\KevsKitchen.Data.dll
+C:\Users\ysong\source\github\KevsKitchen\KevsKitchen\KevsKitchen.Web\bin\KevsKitchen.Data.pdb
