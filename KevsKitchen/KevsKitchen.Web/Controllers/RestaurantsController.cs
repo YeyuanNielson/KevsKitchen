@@ -1,4 +1,5 @@
-﻿using KevsKitchen.Data.Services;
+﻿using KevsKitchen.Data.Models;
+using KevsKitchen.Data.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,30 @@ namespace KevsKitchen.Web.Controllers
         {
             var model = db.GetAll();
             return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var model = db.Get(id);
+            if (model == null)
+            {
+                return View("NotFound");
+            }
+            return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Restaurant restaurant) //Model binding
+        {
+            db.Add(restaurant);
+            return View();
         }
     }
 }
