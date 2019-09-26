@@ -19,8 +19,8 @@ namespace KevsKitchen.Web
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
             builder.RegisterApiControllers(typeof(MvcApplication).Assembly);
 
-            builder.RegisterType<InMemoryRestaurantData>().As<IRestaurantData>().SingleInstance(); //singleton
-
+            builder.RegisterType<SqlRestaurantData>().As<IRestaurantData>().InstancePerRequest();
+            builder.RegisterType<KevsKitchenDBContext>().InstancePerRequest();
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
             httpConfiguration.DependencyResolver = new AutofacWebApiDependencyResolver(container);
